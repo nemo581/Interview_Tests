@@ -16,8 +16,8 @@ public class Solution {
     public static final String CYAN_BOLD = "\033[1;36m";
     public static final String RESET = "\033[0m";
 
-    public static String file_1 = "C:\\Users\\AlRezn\\Documents\\JAVA\\Projects\\InterviewTests\\PerformanceLab\\src\\main\\resources\\tests.json";
-    public static String file_2 = "C:\\Users\\AlRezn\\Documents\\JAVA\\Projects\\InterviewTests\\PerformanceLab\\src\\main\\resources\\values.json";
+    public static String file_1 = "tests.json";
+    public static String file_2 = "values.json";
 
     public static void main(String[] args) throws IOException, JAXBException {
         ObjectMapper objectMapper_1 = new ObjectMapper();
@@ -51,7 +51,7 @@ public class Solution {
         System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(someClass));
 
 
-        Files.write(Paths.get("C:\\Users\\AlRezn\\Documents\\JAVA\\Projects\\InterviewTests\\PerformanceLab\\src\\main\\resources\\report.json"),
+        Files.write(Paths.get("report.json"),
                 mapper.writerWithDefaultPrettyPrinter().writeValueAsString(someClass).getBytes(StandardCharsets.UTF_8));
     }
 
